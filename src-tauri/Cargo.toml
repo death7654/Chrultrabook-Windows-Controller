@@ -8,20 +8,20 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]
-tauri-build = { version = "2.0.3", features = [] }
+tauri-build = { version = "2.0.5", features = [] }
 
 [dependencies]
-tauri = { version = "2.1.1", features = ["tray-icon", "image-png"] }
+tauri = { version = "2.2.2", features = ["tray-icon", "image-png"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-tauri-cli = "1.5.14"
+tauri-cli = "2.2.4"
 tauri-plugin-shell = "2.2.0"
 tauri-plugin-clipboard-manager = "2.2.0"
-tauri-plugin-dialog ="2.2.0"
+tauri-plugin-dialog = "2.2.0"
 tauri-plugin-fs = "2.2.0"
 web-local-storage-api = "0.0.0"
-hidapi = "2.6.1"
-open = "5.1.4"
+hidapi = "2.6.3"
+open = "5.3.2"
 cargo-edit = "0.13.0"
 
 [features]
@@ -30,12 +30,12 @@ custom-protocol = ["tauri/custom-protocol"]
 
 [target."cfg(not(any(target_os = \"android\", target_os = \"ios\")))".dependencies]
 tauri-plugin-autostart = "2.2.0"
-tauri-plugin-single-instance = "2.2.0"
+tauri-plugin-single-instance = "2.2.1"
 
 
 [profile.release]
 codegen-units = 1 # Allows LLVM to perform better optimization.
-lto = true # Enables link-time-optimizations.
-opt-level = 3 # Prioritizes small binary size. Use `3` if you prefer speed.
-panic = "abort" # Higher performance by disabling panic handlers.
-strip = true # Ensures debug symbols are removed.
+lto = true        # Enables link-time-optimizations.
+opt-level = 3     # Prioritizes small binary size. Use `3` if you prefer speed.
+panic = "abort"   # Higher performance by disabling panic handlers.
+strip = true      # Ensures debug symbols are removed.

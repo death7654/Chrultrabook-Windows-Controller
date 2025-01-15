@@ -54,7 +54,9 @@ $table-variants: (
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // All custom CSS below
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&display=swap");
+@import "@fontsource/open-sans/300.css";
+@import "@fontsource/open-sans/800.css";
+//@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&display=swap");
 @import url("../node_modules/bootstrap-icons/font/bootstrap-icons.min.css");
 
 html,
